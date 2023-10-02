@@ -35,4 +35,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
+
 require __DIR__.'/auth.php';
