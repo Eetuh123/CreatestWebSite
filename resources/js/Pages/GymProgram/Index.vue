@@ -14,6 +14,7 @@
                     <div class="p-6 text-gray-900">You're logged in!</div>
                 </div>
             </div>
+            <img src="/images/MuscleFront.png" alt="Description" />
         </div>
     </AuthenticatedLayout>
 </template>
