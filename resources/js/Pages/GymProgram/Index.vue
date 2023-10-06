@@ -1,24 +1,42 @@
 <template>
-    <Head title="Dashboard" />
-
-    <AuthenticatedLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
-            </h2>
-        </template>
-
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">You're logged in!</div>
-                </div>
-            </div>
-            <img src="/images/MuscleFront.png" alt="Description" />
-        </div>
-    </AuthenticatedLayout>
+    <div>
+        <MuscleFront />
+        <MuscleBack />
+    </div>
 </template>
 
-<script setup>
-import { Head } from "@inertiajs/vue3";
+<script>
+import MuscleMap from "../../Components/MuscleMap.vue";
+import MuscleBack from "../../Components/MuscleBack.vue";
+import MuscleFront from "@/Components/MuscleFront.vue";
+
+export default {
+    components: {
+        MuscleBack,
+        MuscleMap,
+        MuscleFront,
+    },
+    data() {
+        return {
+            muscleGroups: {
+                chest: { color: "#ccc", activated: false },
+                leg: { color: "#ccc", activated: false },
+                // more muscle groups
+            },
+            // other data
+        };
+    },
+    methods: {
+        hoverMuscle(muscle) {
+            // Fetch more info or perform other actions
+        },
+        updateMuscleColor() {
+            // Make API calls to get the current state of each muscle group in the program
+            // Update the color based on the fetched data
+        },
+    },
+    mounted() {
+        this.updateMuscleColor();
+    },
+};
 </script>
