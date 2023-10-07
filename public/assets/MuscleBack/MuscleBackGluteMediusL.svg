@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="60.714001pt"
+   height="84.370003pt"
+   viewBox="0 0 60.714001 84.370003"
+   preserveAspectRatio="xMidYMid"
+   id="svg1"
+   sodipodi:docname="MuscleBackGluteMediusL.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     inkscape:zoom="8"
+     inkscape:cx="64.875"
+     inkscape:cy="36.6875"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     transform="matrix(0.1,0,0,-0.1,-170.28589,570.37007)"
+     fill="#000000"
+     stroke="none"
+     id="g1"
+     inkscape:label="g1">
+    <path
+       style="fill:#ffffff;stroke-width:0.193463"
+       d="m 2.8286703,109.00433 c 0,-0.54695 3.4620841,-14.982825 4.135656,-17.561222 C 8.0784871,87.17816 10.499359,75.507041 13.880622,64.519334 19.66911,45.709136 23.813615,33.579213 26.543956,23.131002 29.379691,12.279483 30.367571,8.777367 33.356007,7.263012 36.762065,5.5370308 48.626942,2.9652509 56.214499,1.9378161 58.683006,1.6035545 75.81727,4.9329857 75.982229,5.1210509 76.005997,5.1481484 68.99411,11.765726 64.200557,16.608512 52.669094,28.258411 49.802486,29.463566 47.020512,32.788634 c -4.660896,5.57079 -7.327057,9.625943 -9.791411,14.659014 -1.921259,3.923877 -2.903995,7.407271 -5.363919,14.669834 C 27.190585,75.918547 22.496943,86.177238 16.6829,94.878697 14.843104,97.632186 2.8286703,109.51225 2.8286703,109.00433 Z"
+       id="path2"
+       sodipodi:nodetypes="sssssssssssss"
+       transform="matrix(7.5,0,0,-7.5,1702.8589,5703.7007)" />
+    <path
+       d="m 2085,5689 c -44,-10 -97,-20 -118,-23 -47,-6 -57,-12 -57,-36 0,-28 -54,-230 -109,-406 -27,-87 -59,-197 -71,-244 -12,-47 -24,-93 -26,-102 -3,-11 0,-18 8,-18 17,0 66.1641,55.0703 77.7656,69.6641 3.7338,4.6967 2.0703,3.7656 11.5235,11.3515 6.8281,8.0391 -6.9922,-8.3047 6.6015,7.9922 C 1814.9366,4957.4549 1822,4972 1836,4991 c 41,54 69,116 108,237 20,62 47,129 61,150 39,57 228,245 269,267 20,11 36,22 36,25 0,6 -60,22 -120,33 -14,3 -61,-4 -105,-14 z m 28,-137 c -130,-139 -152,-176 -198,-316 -33,-102 -90,-215 -135,-266 l -21,-25 7,35 c 3,19 35,130 71,245 36,116 75,251 87,300 19,77 26,92 50,103 38,19 142,40 199,41 l 49,1 z"
+       id="path1"
+       sodipodi:nodetypes="scscscsscsccccscsccccccccccc" />
+  </g>
+</svg>

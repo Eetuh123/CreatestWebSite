@@ -1,20 +1,29 @@
 <template>
-    <div>
-        <MuscleFront />
-        <MuscleBack />
+    <div class="parent-container">
+        <div class="glutes">
+            <GluteL />
+            <GluteR />
+        </div>
+
+        <div class="hamstrings">
+            <HamstringL />
+            <HamstringR />
+        </div>
     </div>
 </template>
 
 <script>
-import MuscleMap from "../../Components/MuscleMap.vue";
-import MuscleBack from "../../Components/MuscleBack.vue";
-import MuscleFront from "@/Components/MuscleFront.vue";
+import GluteL from "../../Components/BodyParts/GluteL.vue";
+import GluteR from "../../Components/BodyParts/GluteR.vue";
+import HamstringL from "../../Components/BodyParts/HamstringL.vue";
+import HamstringR from "../../Components/BodyParts/HamstringR.vue";
 
 export default {
     components: {
-        MuscleBack,
-        MuscleMap,
-        MuscleFront,
+        GluteL,
+        GluteR,
+        HamstringL,
+        HamstringR,
     },
     data() {
         return {
@@ -40,3 +49,30 @@ export default {
     },
 };
 </script>
+<style>
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glutes,
+.hamstrings {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.glutes > * {
+    margin-right: -5px;
+}
+.hamstrings > * {
+    margin-right: +20px;
+}
+.glutes {
+    margin-bottom: -10;
+}
+
+.hamstrings {
+    margin-top: 0;
+}
+</style>
