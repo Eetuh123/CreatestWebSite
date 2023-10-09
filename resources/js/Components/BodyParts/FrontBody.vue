@@ -1,15 +1,30 @@
 <template>
     <div class="parent-container">
-        <BackBody />
+        <div class="glutes">
+            <GluteL />
+            <GluteR />
+        </div>
+
+        <div class="hamstrings">
+            <HamstringL />
+            <HamstringR />
+        </div>
     </div>
 </template>
 
 <script>
-import BackBody from "../../Components/BodyParts/BackBody.vue";
+import GluteL from "../../Components/BodyParts/Back/GluteL.vue";
+import GluteR from "../../Components/BodyParts/Back/GluteR.vue";
+import HamstringL from "../../Components/BodyParts/Back/HamstringL.vue";
+import HamstringR from "../../Components/BodyParts/Back/HamstringR.vue";
 
 export default {
+    name: "MuscleFront",
     components: {
-        BackBody,
+        GluteL,
+        GluteR,
+        HamstringL,
+        HamstringR,
     },
     data() {
         return {
