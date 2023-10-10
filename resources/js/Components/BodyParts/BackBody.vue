@@ -1,17 +1,68 @@
 <template>
     <div class="body">
-        <div class="bodyPart">
-            <div class="bodyPartM scale-50">
-                <SpinalErector />
-                <div class="bodyPartL mt-[-52px] ml-[-100px]">
-                    <LatL />
+        <div class="scale-50 bodyPart translate-y-full">
+            <div class="ml-[15px]">
+                <BackHead />
+                <div class="bodyPartL mt-[-47px]">
+                    <SomethingL />
                 </div>
-                <div class="bodyPartL mt-[-52px] ml-[-50px]">
+                <div class="bodyPartR mt-[-47px] ml-[76px]">
+                    <SomethingR />
+                </div>
+            </div>
+            <div class="ml-[-13px] mt-[-6px]">
+                <Traps />
+                <div class="bodyPartL mt-[-200px] ml-[-100px]">
+                    <BackDeltoidL />
+                    <div class="bodyPartL mt-[-34px] ml-[-27px]">
+                        <TricepL />
+                        <div class="bodyPartL mt-[-68px] ml-[-80px]">
+                            <ForearmL />
+                            <div class="bodyPartL mt-[-12px] ml-[-55px]">
+                                <BackArmL />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bodyPartL mt-[-90px] ml-[-38px]">
+                    <LatL />
+                    <div class="bodyPartL mt-[-105px] ml-[10px]">
+                        <BackObligueL />
+                        <div class="bodyPartL mt-[-314px] ml-[-19px]">
+                            <TeresL />
+                        </div>
+                    </div>
+                </div>
+                <div class="bodyPartR mt-[-200px] ml-[151px]">
+                    <BackDeltoidR />
+                    <div class="bodyPartR mt-[-34px] ml-[49px]">
+                        <TricepR />
+                        <div class="bodyPartR mt-[-68px] ml-[45px]">
+                            <ForearmR />
+                            <div class="bodyPartR mt-[-12px] ml-[71px]">
+                                <BackArmR />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bodyPartR mt-[-90px] ml-[80px]">
+                    <LatR />
+                    <div class="bodyPartR mt-[-105px] ml-[56px]">
+                        <BackObligueR />
+                        <div class="bodyPartR mt-[-314px] ml-[-9px]">
+                            <TeresR />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyPartM">
+                <SpinalErector />
+                <div class="bodyPartL mt-[-52px] ml-[-51px]">
                     <GluteL />
                     <div class="bodyPartL mt-[-12px] ml-[56px]">
                         <BackAdductorL />
                     </div>
-                    <div class="bodyPartR mt-[-12px] ml-[56px]">
+                    <div class="bodyPartR mt-[-174px] ml-[-13px]">
                         <GluteMediusL />
                     </div>
                     <div class="bodyPartL mt-[-82px] ml-[-23px]">
@@ -24,18 +75,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="bodyPartR mt-[-52px] ml-[100px]">
-                    <LatR />
-                </div>
                 <div class="bodyPartR mt-[-52px] ml-[70px]">
                     <GluteR />
-                    <div class="bodyPartR mt-[-12px] ml-[9px]">
+                    <div class="bodyPartR mt-[-12px] ml-[10px]">
                         <BackAdductorR />
                     </div>
-                    <div class="bodyPartR mt-[-12px] ml-[9px]">
+                    <div class="bodyPartR mt-[-174px] ml-[55px]">
                         <GluteMediusR />
                     </div>
-                    <div class="bodyPartR mt-[-82px] ml-[42px]">
+                    <div class="bodyPartR mt-[-82px] ml-[43px]">
                         <HamstringR />
                         <div class="bodyPartR mt-[-68px] ml-[36px]">
                             <BackCalvesR />
@@ -51,6 +99,20 @@
 </template>
 
 <script>
+import BackHead from "./Back/BackHead.vue";
+import SomethingL from "./Back/SomethingL.vue";
+import SomethingR from "./Back/SomethingR.vue";
+import Traps from "./Back/Traps.vue";
+import BackDeltoidL from "./Back/BackDeltoidL.vue";
+import BackDeltoidR from "./Back/BackDeltoidR.vue";
+import TricepL from "./Back/TricepL.vue";
+import TricepR from "./Back/TricepR.vue";
+import ForearmL from "./Back/ForearmL.vue";
+import ForearmR from "./Back/ForearmR.vue";
+import BackArmL from "./Back/BackArmL.vue";
+import BackArmR from "./Back/BackArmR.vue";
+import TeresL from "./Back/TeresL.vue";
+import TeresR from "./Back/TeresR.vue";
 import LatL from "./Back/LatL.vue";
 import LatR from "./Back/LatR.vue";
 import BackObligueL from "./Back/BackObligueL.vue";
@@ -72,6 +134,20 @@ import BackAdductorR from "./Back/BackAdductorR.vue";
 export default {
     name: "BackBody",
     components: {
+        BackHead,
+        BackDeltoidL,
+        BackDeltoidR,
+        TricepL,
+        TricepR,
+        ForearmL,
+        ForearmR,
+        BackArmL,
+        BackArmR,
+        TeresL,
+        TeresR,
+        SomethingL,
+        SomethingR,
+        Traps,
         LatL,
         LatR,
         BackObligueL,
