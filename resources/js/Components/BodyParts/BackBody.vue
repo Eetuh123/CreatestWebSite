@@ -17,7 +17,7 @@
                     <div class="bodyPartL mt-[-34px] ml-[-27px]">
                         <TricepL />
                         <div class="bodyPartL mt-[-68px] ml-[-80px]">
-                            <ForearmL />
+                            <ForeArmL />
                             <div class="bodyPartL mt-[-12px] ml-[-55px]">
                                 <BackArmL />
                             </div>
@@ -38,7 +38,7 @@
                     <div class="bodyPartR mt-[-34px] ml-[49px]">
                         <TricepR />
                         <div class="bodyPartR mt-[-68px] ml-[45px]">
-                            <ForearmR />
+                            <ForeArmR />
                             <div class="bodyPartR mt-[-12px] ml-[71px]">
                                 <BackArmR />
                             </div>
@@ -107,8 +107,8 @@ import BackDeltoidL from "./Back/BackDeltoidL.vue";
 import BackDeltoidR from "./Back/BackDeltoidR.vue";
 import TricepL from "./Back/TricepL.vue";
 import TricepR from "./Back/TricepR.vue";
-import ForearmL from "./Back/ForearmL.vue";
-import ForearmR from "./Back/ForearmR.vue";
+import ForeArmL from "./Back/ForeArmL.vue";
+import ForeArmR from "./Back/ForeArmR.vue";
 import BackArmL from "./Back/BackArmL.vue";
 import BackArmR from "./Back/BackArmR.vue";
 import TeresL from "./Back/TeresL.vue";
@@ -139,8 +139,8 @@ export default {
         BackDeltoidR,
         TricepL,
         TricepR,
-        ForearmL,
-        ForearmR,
+        ForeArmL,
+        ForeArmR,
         BackArmL,
         BackArmR,
         TeresL,

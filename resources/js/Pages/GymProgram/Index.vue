@@ -1,14 +1,16 @@
 <template>
     <div class="parent-container">
-        <BackBody />
+        <FrontBody />
     </div>
 </template>
 
 <script>
 import BackBody from "../../Components/BodyParts/BackBody.vue";
+import FrontBody from "../../Components/BodyParts/FrontBody.vue";
 
 export default {
     components: {
+        FrontBody,
         BackBody,
     },
     data() {
