@@ -1,89 +1,94 @@
 <template>
     <div class="body">
         <div class="scale-50 bodyPart translate-y-full">
-            <div class="ml-[15px]">
+            <div class="">
                 <FrontHead />
-                <div class="bodyPartL mt-[-47px]">
+                <div class="bodyPartL mt-[-11px] ml-[-44px]">
                     <FrontTrapL />
                 </div>
-                <div class="bodyPartR mt-[-47px] ml-[76px]">
+                <div class="bodyPartR mt-[-11px] ml-[65px]">
                     <FrontTrapR />
                 </div>
             </div>
-            <div class="ml-[-13px] mt-[-6px]">
+            <div class="ml-[-42px] mt-[-25px]">
                 <MidleChest />
-                <div class="bodyPartL mt-[-81px] ml-[-93px]">
-                    <FrontDeltoidL />
-                    <div class="bodyPartL mt-[-25px] ml-[-18px]">
-                        <BicepL />
-                        <div class="bodyPartL mt-[-43px] ml-[-83px]">
-                            <ForeArmL />
-                            <div class="bodyPartL mt-[-27px] ml-[-68px]">
-                                <FrontHandL />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bodyPartR mt-[-81px] ml-[151px]">
-                    <FrontDeltoidR />
-                    <div class="bodyPartR mt-[-25px] ml-[55px]">
-                        <BicepR />
-                        <div class="bodyPartR mt-[-43px] ml-[30px]">
-                            <ForeArmR />
-                            <div class="bodyPartR mt-[-27px] ml-[102px]">
-                                <FrontHandR />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bodyPartM">
+                <div class="bodyPartM mt-[-4px] ml-[29px]">
                     <Abdominal />
-                    <div class="bodyPartR mt-[-290px] ml-[90px]">
-                        <ObligueR />
-                        <div class="bodyPartR mt-[-395px] ml-[-9px]">
-                            <ChestR />
-                        </div>
-                    </div>
-                    <div class="bodyPartL mt-[-290px] ml-[-52px]">
+                    <div class="bodyPartL mt-[-309px] ml-[-52px]">
                         <ObligueL />
-                        <div class="bodyPartL mt-[-395px] ml-[-19px]">
+                        <div class="bodyPartL mt-[-378px] ml-[-18px]">
                             <ChestL />
+                            <div class="bodyPartL mt-[-123px] ml-[-40px]">
+                                <FrontDeltoidL />
+                                <div class="bodyPartL mt-[-25px] ml-[-18px]">
+                                    <BicepL />
+                                    <div
+                                        class="bodyPartL mt-[-43px] ml-[-83px]"
+                                    >
+                                        <ForeArmL />
+                                        <div
+                                            class="bodyPartL mt-[-27px] ml-[-68px]"
+                                        >
+                                            <FrontHandL />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="bodyPartL ml-[-200px]">
-                <FrontAdductorL />
-                <div class="bodyPartR">
-                    <AbductorL />
-                </div>
-                <div class="bodyPartL ml-[-46px] mt-[-240px]">
-                    <QuadsL />
-                    <div class="bodyPartL mt-[-104px]">
-                        <KneeL />
-                        <div class="bodyPartL mt-[-33px] ml-[-10px]">
-                            <FrontCalvesL />
-                            <div class="bodyPartL mt-[-62px] ml-[-23px]">
-                                <FrontLegL />
+                    <div class="bodyPartR mt-[-309px] ml-[90px]">
+                        <ObligueR />
+                        <div class="bodyPartR mt-[-378px] ml-[-18px]">
+                            <ChestR />
+                            <div class="bodyPartR mt-[-123px] ml-[46px]">
+                                <FrontDeltoidR />
+                                <div class="bodyPartR mt-[-25px] ml-[55px]">
+                                    <BicepR />
+                                    <div class="bodyPartR mt-[-43px] ml-[30px]">
+                                        <ForeArmR />
+                                        <div
+                                            class="bodyPartR mt-[-27px] ml-[102px]"
+                                        >
+                                            <FrontHandR />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="bodyPartR ml-[32px]">
-                <FrontAdductorR />
-                <div class="bodyPartR">
-                    <AbductorR />
+                <div class="bodyPartL ml-[4px] mt-[204px]">
+                    <FrontAdductorL />
+                    <div class="bodyPartL mt-[-297px] ml-[-44px]">
+                        <AbductorL />
+                    </div>
+                    <div class="bodyPartL ml-[-47px] mt-[-248px]">
+                        <QuadsL />
+                        <div class="bodyPartL mt-[-104px]">
+                            <KneeL />
+                            <div class="bodyPartL mt-[-33px] ml-[-10px]">
+                                <FrontCalvesL />
+                                <div class="bodyPartL mt-[-62px] ml-[-23px]">
+                                    <FrontLegL />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bodyPartR ml-[32px] mt-[-240px]">
-                    <QuadsR />
-                    <div class="bodyPartR mt-[-104px]">
-                        <KneeR />
-                        <div class="bodyPartR mt-[-33px] ml-[15px]">
-                            <FrontCalvesR />
-                            <div class="bodyPartR mt-[-62px] ml-[26px]">
-                                <FrontLegR />
+                <div class="bodyPartR ml-[98px] mt-[204px]">
+                    <FrontAdductorR />
+                    <div class="bodyPartR mt-[-297px] ml-[82px]">
+                        <AbductorR />
+                    </div>
+                    <div class="bodyPartR ml-[32px] mt-[-248px]">
+                        <QuadsR />
+                        <div class="bodyPartR mt-[-104px]">
+                            <KneeR />
+                            <div class="bodyPartR mt-[-33px] ml-[15px]">
+                                <FrontCalvesR />
+                                <div class="bodyPartR mt-[-62px] ml-[26px]">
+                                    <FrontLegR />
+                                </div>
                             </div>
                         </div>
                     </div>
