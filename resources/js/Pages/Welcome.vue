@@ -8,9 +8,6 @@
                 class="relative w-64 h-64 my-8 bg-white rounded-full mb-2 shadow deep-box-shadow-right-down"
             >
                 <div
-                    class="flex justify-center font-awesome-icon items-center bottom- left- absolute w-32 h-32 bg-white rounded-full shadow deep-box-shadow-right-down"
-                ></div>
-                <div
                     class="flex justify-center font-awesome-icon items-center h-14 w-14 bottom-10 -left-12 bg-white rounded-full shadow absolute hover:bg-black"
                 >
                     <font-awesome-icon icon="fa-brands fa-github" size="2x" />
@@ -40,9 +37,7 @@
                 <h1 class="text-center text-4xl font-bold text-black">
                     About me
                 </h1>
-                <p
-                    class="text-center break-words text-2xl font-bold text-black"
-                >
+                <p class="text-center break-words font-bold text-black">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis sed velit vel libero congue venenatis a quis orci.
                     Phasellus tristique nisl a nisi maximus suscipit. Nam mattis
@@ -98,10 +93,36 @@
         >
             <div
                 class="w-96 h-72 mt-14 bg-white rounded-3xl mb-8 shadow deep-box-shadow-left-down"
-            ></div>
+            >
+                <div class="flex flex-col items-center">
+                    <h1 class="text-center">Skills</h1>
+                    <div class="px-4 text-left font-bold">
+                        <p>Web Development: PHP, JavaScript, CSS, HTML</p>
+                        <p>Frameworks/Libraries: Laravel, Vue.js</p>
+                        <p>Version Control: Git</p>
+                        <p>
+                            Virtualization & Environment: Vagrant, Virtual
+                            Machine (VM), Docker (Beginner)
+                        </p>
+                        <p>
+                            Design & Planning: Wireframing (Beginner), Ink
+                            Studio (Beginner)
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div
                 class="w-96 h-72 bg-white rounded-3xl mb-8 shadow deep-box-shadow-left"
-            ></div>
+            >
+                <div class="flex flex-col items-center">
+                    <h1>Jobs</h1>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="px-4 text-left font-bold">
+                        <p>Intern to Junior Dev in Moder</p>
+                    </div>
+                </div>
+            </div>
             <div
                 class="flex justify-center w-60 h-32 bg-white rounded-3xl shadow deep-box-shadow-left-up"
             >
@@ -109,11 +130,11 @@
                     <h1>Contact Me</h1>
                     <div class="flex items-center">
                         <font-awesome-icon icon="fa-solid fa-phone" />
-                        <span>&nbsp; Your phone number here</span>
+                        <p>Your phone number here</p>
                     </div>
                     <div class="flex items-center">
                         <font-awesome-icon icon="fa-solid fa-envelope" />
-                        <span>&nbsp; Your email address here</span>
+                        <p>Your email address here</p>
                     </div>
                 </div>
             </div>
@@ -187,12 +208,12 @@ import { Head, Link } from "@inertiajs/vue3";
         10px 10px 30px rgba(0, 0, 0, 0.9);
 }
 h1 {
-    @apply text-4xl font-bold text-gray-900 font-mukta !important;
+    @apply text-4xl font-bold text-charcoal font-mukta !important;
 }
 h2 {
-    @apply text-lg font-semibold text-gray-800 font-mukta !important;
+    @apply text-lg font-semibold text-charcoal font-mukta !important;
 }
 p {
-    @apply text-base text-gray-600 font-mukta !important;
+    @apply text-base text-charcoal font-mukta !important;
 }
 </style>

@@ -16,6 +16,9 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 mukta: ["Mukta", "sans-serif"],
             },
+            colors: {
+                charcoal: "#323232", // Your charcoal color code
+            },
         },
     },
 
