@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exercise_body_part', function (Blueprint $table) {
+        Schema::create('daily_exercises', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('exercise_id')->constrained();
-            $table->foreignId('body_part_id')->constrained();
-            $table->boolean('active');
-            $table->integer('intensity');
+            $table->string('days')->nullable(); 
+            $table->string('name');
+            $table->text('notes')->nullable();
+            $table->time('standardized_rest')->nullable();
+            $table->json('exercise_ids')->nullable();
             $table->timestamps();
+            $table->foreignId('week_id');
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exercise_body_part');
+        Schema::dropIfExists('daily_exercises');
     }
 };

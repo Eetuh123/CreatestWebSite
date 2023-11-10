@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exercise', function (Blueprint $table) {
+        Schema::create('body_parts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedTinyInteger('stimulated')->default(0);
+            $table->string('color')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exercise');
+        Schema::dropIfExists('body_parts');
     }
 };

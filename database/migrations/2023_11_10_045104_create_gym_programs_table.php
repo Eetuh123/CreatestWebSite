@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('body_parts', function (Blueprint $table) {
+        Schema::create('gym_programs', function (Blueprint $table) {
             $table->id();
-            $table->string('part');
+            $table->foreignId('user_id');
+            $table->string('name');
+            $table->integer('length');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('body_parts');
+        Schema::dropIfExists('gym_programs');
     }
 };
