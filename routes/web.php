@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlgorithmsController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -37,5 +38,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
+Route::get('/algoritms', [AlgorithmsController::class, 'index'])->name('algoritms.index');
 
 require __DIR__.'/auth.php';
