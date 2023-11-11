@@ -37,5 +37,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
+Route::post('/gymprogram', [GymProgramController::class, 'store'])->name('program.store');
 
 require __DIR__.'/auth.php';
