@@ -48,9 +48,7 @@
                     vehicula dui, sit amet ullamcorper velit pharetra ut. Nunc
                     placerat, tortor eget semper scelerisque, libero mi tempor
                     elit, eget dapibus metus tellus vitae mauris. In id quam
-                    lorem. Praesent iaculis accumsan dolor vel consequat. In non
-                    elit velit. Nulla auctor eget lorem sit amet accumsan. Sed
-                    accumsan purus sit amet risus congue.
+                    lorem. Praesent iaculis accumsan dolor vel consequat.
                 </p>
             </div>
         </div>
@@ -130,11 +128,11 @@
                     <h1>Contact Me</h1>
                     <div class="flex items-center">
                         <font-awesome-icon icon="fa-solid fa-phone" />
-                        <p>Your phone number here</p>
+                        <p class="pl-1">+358440742509</p>
                     </div>
                     <div class="flex items-center">
                         <font-awesome-icon icon="fa-solid fa-envelope" />
-                        <p>Your email address here</p>
+                        <p class="pl-1">Eetu@moder.fi</p>
                     </div>
                 </div>
             </div>
@@ -156,56 +154,121 @@ import { Head, Link } from "@inertiajs/vue3";
     color: #fff; /* Color on hover */
 }
 .deep-box-shadow-left {
-    box-shadow: 0 1px 0 #fff, -1px 0 0 #2e2e2e, -2px 0 0 #2c2c2c,
-        -3px 0 0 #2a2a2a, -4px 0 0 #282828, -5px 0 0 #262626, -6px 0 0 #242424,
-        -7px 0 0 #222, -8px 0 0 #202020, -9px 0 0 #1e1e1e, -10px 0 0 #1c1c1c,
-        -11px 0 0 #1a1a1a, -12px 0 0 #181818, -13px 0 0 #161616,
-        -14px 0 0 #141414, -15px 0 0 #121212, 22px 0px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0px 2px rgba(255, 255, 255, 0.7),
+        -1px 0px 1px rgba(230, 230, 230, 0.5),
+        -2px 0px 2px rgba(210, 210, 210, 0.5),
+        -3px 0px 3px rgba(190, 190, 190, 0.5),
+        -4px 0px 4px rgba(170, 170, 170, 0.5),
+        -5px 0px 5px rgba(150, 150, 150, 0.5),
+        -6px 0px 6px rgba(130, 130, 130, 0.5),
+        -7px 0px 7px rgba(110, 110, 110, 0.5),
+        -8px 0px 8px rgba(90, 90, 90, 0.5), -9px 0px 9px rgba(70, 70, 70, 0.5),
+        -10px 0px 10px rgba(50, 50, 50, 0.5),
+        -20px -0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
 }
 .deep-box-shadow-left-up {
-    box-shadow: 0 1px 0 #fff, -1px -1px 0 #2e2e2e, -2px -2px 0 #2c2c2c,
-        -3px -3px 0 #2a2a2a, -4px -4px 0 #282828, -5px -5px 0 #262626,
-        -6px -6px 0 #242424, -7px -7px 0 #222, -8px -8px 0 #202020,
-        -9px -9px 0 #1e1e1e, -10px -10px 0 #1c1c1c, -11px -11px 0 #1a1a1a,
-        -12px -12px 0 #181818, -13px -13px 0 #161616, -14px -14px 0 #141414,
-        -15px -15px 0 #121212, 22px 22px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.7),
+        -1px -1px 1px rgba(230, 230, 230, 0.5),
+        -2px -2px 2px rgba(210, 210, 210, 0.5),
+        -3px -3px 3px rgba(190, 190, 190, 0.5),
+        -4px -4px 4px rgba(170, 170, 170, 0.5),
+        -5px -5px 5px rgba(150, 150, 150, 0.5),
+        -6px -6px 6px rgba(130, 130, 130, 0.5),
+        -7px -7px 7px rgba(110, 110, 110, 0.5),
+        -8px -8px 8px rgba(90, 90, 90, 0.5), -9px -9px 9px rgba(70, 70, 70, 0.5),
+        -10px -10px 10px rgba(50, 50, 50, 0.5), 0 -20px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
 }
 .deep-box-shadow-left-down {
-    box-shadow: 0 1px 0 #fff, -1px 1px 0 #2e2e2e, -2px 2px 0 #2c2c2c,
-        -3px 3px 0 #2a2a2a, -4px 4px 0 #282828, -5px 5px 0 #262626,
-        -6px 6px 0 #242424, -7px 7px 0 #222, -8px 8px 0 #202020,
-        -9px 9px 0 #1e1e1e, -10px 10px 0 #1c1c1c, -11px 11px 0 #1a1a1a,
-        -12px 12px 0 #181818, -13px 13px 0 #161616, -14px 14px 0 #141414,
-        -15px 15px 0 #121212, 22px -22px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7),
+        -1px 1px 1px rgba(230, 230, 230, 0.5),
+        -2px 2px 2px rgba(210, 210, 210, 0.5),
+        -3px 3px 3px rgba(190, 190, 190, 0.5),
+        -4px 4px 4px rgba(170, 170, 170, 0.5),
+        -5px 5px 5px rgba(150, 150, 150, 0.5),
+        -6px 6px 6px rgba(130, 130, 130, 0.5),
+        -7px 7px 7px rgba(110, 110, 110, 0.5),
+        -8px 8px 8px rgba(90, 90, 90, 0.5), -9px 9px 9px rgba(70, 70, 70, 0.5),
+        -10px 10px 10px rgba(50, 50, 50, 0.5), 0 20px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
 }
 .deep-box-shadow-right {
-    box-shadow: 0 1px 0 #fff, 1px 0 0 #2e2e2e, 2px 0 0 #2c2c2c, 3px 0 0 #2a2a2a,
-        4px 0 0 #282828, 5px 0 0 #262626, 6px 0 0 #242424, 7px 0 0 #222,
-        8px 0 0 #202020, 9px 0 0 #1e1e1e, 10px 0 0 #1c1c1c, 11px 0 0 #1a1a1a,
-        12px 0 0 #181818, 13px 0 0 #161616, 14px 0 0 #141414, 15px 0 0 #121212,
-        -22px 0px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0px 2px rgba(255, 255, 255, 0.7),
+        1px 0px 1px rgba(230, 230, 230, 0.5),
+        2px 0px 2px rgba(210, 210, 210, 0.5),
+        3px 0px 3px rgba(190, 190, 190, 0.5),
+        4px 0px 4px rgba(170, 170, 170, 0.5),
+        5px 0px 5px rgba(150, 150, 150, 0.5),
+        6px 0px 6px rgba(130, 130, 130, 0.5),
+        7px 0px 7px rgba(110, 110, 110, 0.5), 8px 0px 8px rgba(90, 90, 90, 0.5),
+        9px 0px 9px rgba(70, 70, 70, 0.5), 10px 0px 10px rgba(50, 50, 50, 0.5),
+        20px -0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: #fff;
 }
 
 .deep-box-shadow-right-up {
-    box-shadow: 0 1px 0 #fff, 1px -1px 0 #2e2e2e, 2px -2px 0 #2c2c2c,
-        3px -3px 0 #2a2a2a, 4px -4px 0 #282828, 5px -5px 0 #262626,
-        6px -6px 0 #242424, 7px -7px 0 #222, 8px -8px 0 #202020,
-        9px -9px 0 #1e1e1e, 10px -10px 0 #1c1c1c, 11px -11px 0 #1a1a1a,
-        12px -12px 0 #181818, 13px -13px 0 #161616, 14px -14px 0 #141414,
-        15px -15px 0 #121212, -22px 22px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.7),
+        1px -1px 1px rgba(230, 230, 230, 0.5),
+        2px -2px 2px rgba(210, 210, 210, 0.5),
+        3px -3px 3px rgba(190, 190, 190, 0.5),
+        4px -4px 4px rgba(170, 170, 170, 0.5),
+        5px -5px 5px rgba(150, 150, 150, 0.5),
+        6px -6px 6px rgba(130, 130, 130, 0.5),
+        7px -7px 7px rgba(110, 110, 110, 0.5),
+        8px -8px 8px rgba(90, 90, 90, 0.5), 9px -9px 9px rgba(70, 70, 70, 0.5),
+        10px -10px 10px rgba(50, 50, 50, 0.5), 0 -20px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 0 20px;
+    background: #fff;
 }
 
 .deep-box-shadow-right-down {
-    box-shadow: 0 1px 0 #fff, 1px 1px 0 #2e2e2e, 2px 2px 0 #2c2c2c,
-        3px 3px 0 #2a2a2a, 4px 4px 0 #282828, 5px 5px 0 #262626,
-        6px 6px 0 #242424, 7px 7px 0 #222, 8px 8px 0 #202020, 9px 9px 0 #1e1e1e,
-        10px 10px 0 #1c1c1c, 11px 11px 0 #1a1a1a, 12px 12px 0 #181818,
-        13px 13px 0 #161616, 14px 14px 0 #141414, 15px 15px 0 #121212,
-        -22px -22px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7),
+        1px 1px 1px rgba(230, 230, 230, 0.5),
+        2px 2px 2px rgba(210, 210, 210, 0.5),
+        3px 3px 3px rgba(190, 190, 190, 0.5),
+        4px 4px 4px rgba(170, 170, 170, 0.5),
+        5px 5px 5px rgba(150, 150, 150, 0.5),
+        6px 6px 6px rgba(130, 130, 130, 0.5),
+        7px 7px 7px rgba(110, 110, 110, 0.5), 8px 8px 8px rgba(90, 90, 90, 0.5),
+        9px 9px 9px rgba(70, 70, 70, 0.5), 10px 10px 10px rgba(50, 50, 50, 0.5),
+        0 20px 20px rgba(0, 0, 0, 0.15);
 }
 .shadow-middle {
-    box-shadow: 0 1px 0 #fff, -10px -10px 30px rgba(0, 0, 0, 0.9),
-        10px 10px 30px rgba(0, 0, 0, 0.9);
+    transition: box-shadow 0.7s ease, transform 0.5s ease;
+    box-shadow: 0px 0px 2px rgba(230, 230, 230, 0.7),
+        0px 0px 4px rgba(210, 210, 210, 0.7),
+        0px 0px 6px rgba(190, 190, 190, 0.7),
+        0px 0px 8px rgba(170, 170, 170, 0.7),
+        0px 0px 10px rgba(150, 150, 150, 0.7),
+        0px 0px 12px rgba(130, 130, 130, 0.7),
+        0px 0px 14px rgba(110, 110, 110, 0.7),
+        0px 0px 16px rgba(90, 90, 90, 0.7), 0px 0px 18px rgba(70, 70, 70, 0.7),
+        0px 0px 20px rgba(50, 50, 50, 0.7), 0px 0px 22px rgba(30, 30, 30, 0.7);
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.shadow-middle:hover {
+    transform: translateY(3px);
+    box-shadow: 0px 0px 3px rgba(230, 230, 230, 0.8),
+        0px 0px 6px rgba(210, 210, 210, 0.8),
+        0px 0px 9px rgba(190, 190, 190, 0.8),
+        0px 0px 12px rgba(170, 170, 170, 0.8),
+        0px 0px 15px rgba(150, 150, 150, 0.8),
+        0px 0px 18px rgba(130, 130, 130, 0.8),
+        0px 0px 21px rgba(110, 110, 110, 0.8),
+        0px 0px 24px rgba(90, 90, 90, 0.8), 0px 0px 27px rgba(70, 70, 70, 0.8);
+    padding: 20px;
 }
 h1 {
     @apply text-4xl font-bold text-charcoal font-mukta !important;
