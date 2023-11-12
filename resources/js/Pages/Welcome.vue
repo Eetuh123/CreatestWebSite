@@ -1,19 +1,18 @@
 <template>
     <Head title="Welcome" />
-    <div class="flex flex-row h-screen bg-#E0E0E0">
-        <div
-            class="flex flex-col flex-1 my-14 ml-56 row-1 justify-start items-center"
-        >
+    <div class="flex flex-row flex-wrap h-screen bg-#E0E0E0 gap-y-0.5">
+        <div class="flex flex-1 justify-center flex-col row-1 items-center">
             <div
-                class="relative w-64 h-64 my-8 bg-white rounded-full mb-2 shadow deep-box-shadow-right-down"
-            >
+                class="w-64 h-64 bg-white rounded-full shadow deep-box-shadow-right-down"
+            ></div>
+            <div class="absolute flex -translate-x-32 -translate-y-32">
                 <div
-                    class="flex justify-center font-awesome-icon items-center h-14 w-14 bottom-10 -left-12 bg-white rounded-full shadow absolute hover:bg-black"
+                    class="flex justify-center font-awesome-icon items-center h-14 w-14 bottom-10 -left-14 bg-white rounded-full shadow absolute deep-box-shadow-right-down hover:bg-black"
                 >
                     <font-awesome-icon icon="fa-brands fa-github" size="2x" />
                 </div>
                 <div
-                    class="flex justify-center font-awesome-icon items-center h-14 w-14 -bottom-4 -left-4 bg-white rounded-full shadow absolute hover:bg-blue-600"
+                    class="flex justify-center font-awesome-icon items-center h-14 w-14 -bottom-4 -left-4 bg-white rounded-full shadow absolute deep-box-shadow-right-down hover:bg-blue-600"
                 >
                     <font-awesome-icon
                         icon="fa-brands fa-linkedin-in"
@@ -53,10 +52,10 @@
             </div>
         </div>
         <div
-            class="flex flex-col flex-1 my-14 row-2 justify-start rounded-3xl items-center"
+            class="flex flex-1 justify-center flex-col row-2 rounded-3xl items-center"
         >
             <div
-                class="flex flex-col items-center w-96 my-16 h-5/6 bg-white rounded-3xl shadow shadow-middle"
+                class="flex flex-col items-center w-96 m-16 max-[1280px]:h-po h-5/6 bg-white rounded-3xl shadow shadow-middle"
             >
                 <h1 class="text-center text-4xl font-bold text-black">
                     Project Name
@@ -86,10 +85,10 @@
             </div>
         </div>
         <div
-            class="flex flex-col flex-1 my-14 mr-56 row-3 justify-start items-center"
+            class="flex flex-1 justify-center flex-col row-3 items-center max-[1280px]:pb-12"
         >
             <div
-                class="w-96 h-72 mt-14 bg-white rounded-3xl mb-8 shadow deep-box-shadow-left-down"
+                class="w-96 h-72 mt-14 bg-white rounded-3xl mb-8 shadow deep-box-shadow-left-down max-[1280px]:mt-0"
             >
                 <div class="flex flex-col items-center">
                     <h1 class="text-center">Skills</h1>

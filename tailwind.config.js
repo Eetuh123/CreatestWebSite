@@ -17,7 +17,17 @@ export default {
                 mukta: ["Mukta", "sans-serif"],
             },
             colors: {
-                charcoal: "#323232", // Your charcoal color code
+                charcoal: "#323232", // Charcoal
+            },
+            height: {
+                po: "40rem",
+            },
+            screens: {
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1280px",
+                "2xl": "1536px",
             },
         },
     },
