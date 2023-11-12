@@ -70,7 +70,6 @@
                         Phasellus tristique nisl a nisi maximus suscipit.Lorem
                         ipsum dolor sit amet, consectetur adipiscing elit. Duis
                         sed velit vel libero congue venenatis a quis orci.
-                        Phasellus tristique nisl a nisi maximus suscipit.
                     </p>
                 </div>
                 <div
@@ -164,10 +163,25 @@ import { Head, Link } from "@inertiajs/vue3";
         -7px 0px 7px rgba(110, 110, 110, 0.5),
         -8px 0px 8px rgba(90, 90, 90, 0.5), -9px 0px 9px rgba(70, 70, 70, 0.5),
         -10px 0px 10px rgba(50, 50, 50, 0.5),
-        -20px -0px 20px rgba(0, 0, 0, 0.15);
+        -20px -0px 20px rgba(0, 0, 0, 0.15), 1px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
     background: #fff;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+.deep-box-shadow-left:hover {
+    box-shadow: 0 0px 3px rgba(255, 255, 255, 0.7),
+        -2px 0px 1px rgba(230, 230, 230, 0.5),
+        -4px 0px 2px rgba(210, 210, 210, 0.5),
+        -6px 0px 3px rgba(190, 190, 190, 0.5),
+        -8px 0px 4px rgba(170, 170, 170, 0.5),
+        -10px 0px 5px rgba(150, 150, 150, 0.5),
+        -12px 0px 6px rgba(130, 130, 130, 0.5),
+        -14px 0px 7px rgba(110, 110, 110, 0.5),
+        -16px 0px 8px rgba(90, 90, 90, 0.5), -18px 0px 9px rgba(70, 70, 70, 0.5),
+        -20px 0px 10px rgba(50, 50, 50, 0.5), -25px 0 25px rgba(0, 0, 0, 0.2),
+        1px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: translate(6px);
 }
 .deep-box-shadow-left-up {
     box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.7),
@@ -179,10 +193,27 @@ import { Head, Link } from "@inertiajs/vue3";
         -6px -6px 6px rgba(130, 130, 130, 0.5),
         -7px -7px 7px rgba(110, 110, 110, 0.5),
         -8px -8px 8px rgba(90, 90, 90, 0.5), -9px -9px 9px rgba(70, 70, 70, 0.5),
-        -10px -10px 10px rgba(50, 50, 50, 0.5), 0 -20px 20px rgba(0, 0, 0, 0.15);
+        -10px -10px 10px rgba(50, 50, 50, 0.5), 0 -20px 20px rgba(0, 0, 0, 0.15),
+        1px 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
     background: #fff;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+.deep-box-shadow-left-up:hover {
+    box-shadow: 0 -2px 3px rgba(255, 255, 255, 0.7),
+        -2px -2px 1px rgba(230, 230, 230, 0.5),
+        -4px -4px 2px rgba(210, 210, 210, 0.5),
+        -6px -6px 3px rgba(190, 190, 190, 0.5),
+        -8px -8px 4px rgba(170, 170, 170, 0.5),
+        -10px -10px 5px rgba(150, 150, 150, 0.5),
+        -12px -12px 6px rgba(130, 130, 130, 0.5),
+        -14px -14px 7px rgba(110, 110, 110, 0.5),
+        -16px -16px 8px rgba(90, 90, 90, 0.5),
+        -18px -18px 9px rgba(70, 70, 70, 0.5),
+        -20px -20px 10px rgba(50, 50, 50, 0.5), 0 -25px 25px rgba(0, 0, 0, 0.2),
+        1px 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translate(6px, 6px);
 }
 .deep-box-shadow-left-down {
     box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7),
@@ -194,10 +225,27 @@ import { Head, Link } from "@inertiajs/vue3";
         -6px 6px 6px rgba(130, 130, 130, 0.5),
         -7px 7px 7px rgba(110, 110, 110, 0.5),
         -8px 8px 8px rgba(90, 90, 90, 0.5), -9px 9px 9px rgba(70, 70, 70, 0.5),
-        -10px 10px 10px rgba(50, 50, 50, 0.5), 0 20px 20px rgba(0, 0, 0, 0.15);
+        -10px 10px 10px rgba(50, 50, 50, 0.5), 0 20px 20px rgba(0, 0, 0, 0.15),
+        1px -1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
     background: #fff;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+.deep-box-shadow-left-down:hover {
+    box-shadow: 0 2px 3px rgba(255, 255, 255, 0.7),
+        -2px 2px 1px rgba(230, 230, 230, 0.5),
+        -4px 4px 2px rgba(210, 210, 210, 0.5),
+        -6px 6px 3px rgba(190, 190, 190, 0.5),
+        -8px 8px 4px rgba(170, 170, 170, 0.5),
+        -10px 10px 5px rgba(150, 150, 150, 0.5),
+        -12px 12px 6px rgba(130, 130, 130, 0.5),
+        -14px 14px 7px rgba(110, 110, 110, 0.5),
+        -16px 16px 8px rgba(90, 90, 90, 0.5),
+        -18px 18px 9px rgba(70, 70, 70, 0.5),
+        -20px 20px 10px rgba(50, 50, 50, 0.5), 0 25px 25px rgba(0, 0, 0, 0.2),
+        1px -1px 10px rgba(0, 0, 0, 0.1);
+    transform: translate(6px, -6px);
 }
 .deep-box-shadow-right {
     box-shadow: 0 0px 2px rgba(255, 255, 255, 0.7),
@@ -209,11 +257,25 @@ import { Head, Link } from "@inertiajs/vue3";
         6px 0px 6px rgba(130, 130, 130, 0.5),
         7px 0px 7px rgba(110, 110, 110, 0.5), 8px 0px 8px rgba(90, 90, 90, 0.5),
         9px 0px 9px rgba(70, 70, 70, 0.5), 10px 0px 10px rgba(50, 50, 50, 0.5),
-        20px -0px 20px rgba(0, 0, 0, 0.15);
+        20px 0px 20px rgba(0, 0, 0, 0.15), -1px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background: #fff;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
 }
-
+.deep-box-shadow-right:hover {
+    box-shadow: 0 0px 3px rgba(255, 255, 255, 0.7),
+        2px 0px 1px rgba(230, 230, 230, 0.5),
+        4px 0px 2px rgba(210, 210, 210, 0.5),
+        6px 0px 3px rgba(190, 190, 190, 0.5),
+        8px 0px 4px rgba(170, 170, 170, 0.5),
+        10px 0px 5px rgba(150, 150, 150, 0.5),
+        12px 0px 6px rgba(130, 130, 130, 0.5),
+        14px 0px 7px rgba(110, 110, 110, 0.5),
+        16px 0px 8px rgba(90, 90, 90, 0.5), 18px 0px 9px rgba(70, 70, 70, 0.5),
+        20px 0px 10px rgba(50, 50, 50, 0.5), 25px 0 25px rgba(0, 0, 0, 0.2),
+        -1px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: translate(-6px);
+}
 .deep-box-shadow-right-up {
     box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.7),
         1px -1px 1px rgba(230, 230, 230, 0.5),
@@ -224,12 +286,28 @@ import { Head, Link } from "@inertiajs/vue3";
         6px -6px 6px rgba(130, 130, 130, 0.5),
         7px -7px 7px rgba(110, 110, 110, 0.5),
         8px -8px 8px rgba(90, 90, 90, 0.5), 9px -9px 9px rgba(70, 70, 70, 0.5),
-        10px -10px 10px rgba(50, 50, 50, 0.5), 0 -20px 20px rgba(0, 0, 0, 0.15);
+        10px -10px 10px rgba(50, 50, 50, 0.5), 0 -20px 20px rgba(0, 0, 0, 0.15),
+        -1px 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 0 20px;
     background: #fff;
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
 }
-
+.deep-box-shadow-right-up:hover {
+    box-shadow: 0 -2px 3px rgba(255, 255, 255, 0.7),
+        2px -2px 1px rgba(230, 230, 230, 0.5),
+        4px -4px 2px rgba(210, 210, 210, 0.5),
+        6px -6px 3px rgba(190, 190, 190, 0.5),
+        8px -8px 4px rgba(170, 170, 170, 0.5),
+        10px -10px 5px rgba(150, 150, 150, 0.5),
+        12px -12px 6px rgba(130, 130, 130, 0.5),
+        14px -14px 7px rgba(110, 110, 110, 0.5),
+        16px -16px 8px rgba(90, 90, 90, 0.5),
+        18px -16px 9px rgba(70, 70, 70, 0.5),
+        20px -20px 10px rgba(50, 50, 50, 0.5), 0 -25px 25px rgba(0, 0, 0, 0.2),
+        -1px 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translate(-6px, 6px);
+}
 .deep-box-shadow-right-down {
     box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7),
         1px 1px 1px rgba(230, 230, 230, 0.5),
@@ -240,7 +318,22 @@ import { Head, Link } from "@inertiajs/vue3";
         6px 6px 6px rgba(130, 130, 130, 0.5),
         7px 7px 7px rgba(110, 110, 110, 0.5), 8px 8px 8px rgba(90, 90, 90, 0.5),
         9px 9px 9px rgba(70, 70, 70, 0.5), 10px 10px 10px rgba(50, 50, 50, 0.5),
-        0 20px 20px rgba(0, 0, 0, 0.15);
+        0 20px 20px rgba(0, 0, 0, 0.15), -1px -1px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+.deep-box-shadow-right-down:hover {
+    box-shadow: 0 2px 3px rgba(255, 255, 255, 0.7),
+        2px 2px 1px rgba(230, 230, 230, 0.5),
+        4px 4px 2px rgba(210, 210, 210, 0.5),
+        6px 6px 3px rgba(190, 190, 190, 0.5),
+        8px 8px 4px rgba(170, 170, 170, 0.5),
+        10px 10px 5px rgba(150, 150, 150, 0.5),
+        12px 12px 6px rgba(130, 130, 130, 0.5),
+        14px 14px 7px rgba(110, 110, 110, 0.5),
+        16px 16px 8px rgba(90, 90, 90, 0.5), 18px 18px 9px rgba(70, 70, 70, 0.5),
+        20px 20px 10px rgba(50, 50, 50, 0.5), 0 25px 25px rgba(0, 0, 0, 0.2),
+        -1px -1px 10px rgba(0, 0, 0, 0.1);
+    transform: translate(-6px, -6px);
 }
 .shadow-middle {
     transition: box-shadow 0.7s ease, transform 0.5s ease;
