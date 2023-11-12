@@ -1,6 +1,6 @@
 <template>
     <Head title="Welcome" />
-    <div class="flex flex-row flex-wrap h-screen bg-#E0E0E0 gap-y-0.5">
+    <div class="flex flex-row flex-wrap h-screen bg-#E0E0E0">
         <div class="flex flex-1 justify-center flex-col row-1 items-center">
             <div
                 class="w-64 h-64 bg-white rounded-full shadow deep-box-shadow-right-down"
@@ -85,7 +85,7 @@
             </div>
         </div>
         <div
-            class="flex flex-1 justify-center flex-col row-3 items-center max-[1280px]:pb-12"
+            class="flex flex-1 justify-center flex-col py-6 row-3 items-center max-[1280px]:py-12"
         >
             <div
                 class="w-96 h-72 mt-14 bg-white rounded-3xl mb-8 shadow deep-box-shadow-left-down max-[1280px]:mt-0"
