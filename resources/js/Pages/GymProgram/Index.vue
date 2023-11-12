@@ -1,4 +1,8 @@
 <template>
+    <div><input v-model="name" /></div>
+    <input v-model="length" />
+    <button @click="submitForm">Submit</button>
+
     <div class="parent-container">
         <FrontBody />
     </div>
@@ -15,6 +19,8 @@ export default {
     },
     data() {
         return {
+            input1: "",
+            input2: "",
             muscleGroups: {
                 chest: { color: "#ccc", activated: false },
                 leg: { color: "#ccc", activated: false },
@@ -24,6 +30,21 @@ export default {
         };
     },
     methods: {
+        submitForm() {
+            const payload = {
+                input1: this.input1,
+                input2: this.input2,
+            };
+            axios
+                .post("/gymprogram", payload)
+                .then((response) => {
+                    alert("Form submitted successfully!");
+                })
+                .catch((error) => {
+                    alert("An error occurred while submitting the form.");
+                });
+        },
+
         hoverMuscle(muscle) {
             // Fetch more info or perform other actions
         },
