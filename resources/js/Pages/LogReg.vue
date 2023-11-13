@@ -1,8 +1,5 @@
 <template>
     <GuestLayout>
-        <Head title="Login/Register" />
-
-        <!-- Toggle Button or Links -->
         <div class="text-center">
             <button
                 @click="showLoginForm = !showLoginForm"
@@ -11,10 +8,9 @@
                 {{ showLoginForm ? "Register" : "Login" }}
             </button>
         </div>
-
         <!-- Login Form -->
         <form @submit.prevent="submitLogin" v-if="showLoginForm">
-                        <div>
+            <div>
                 <InputLabel for="email" value="Email" />
 
                 <TextInput
@@ -26,8 +22,6 @@
                     autofocus
                     autocomplete="username"
                 />
-
-                <InputError class="mt-2" :message="loginForm.errors.email" />
             </div>
 
             <div class="mt-4">
@@ -41,13 +35,14 @@
                     required
                     autocomplete="current-password"
                 />
-
-                <InputError class="mt-2" :message="loginForm.errors.password" />
             </div>
 
             <div class="block mt-4">
                 <label class="flex items-center">
-                    <Checkbox name="remember" v-model:checked="loginForm.remember" />
+                    <Checkbox
+                        name="remember"
+                        v-model:checked="loginForm.remember"
+                    />
                     <span class="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
             </div>
@@ -73,7 +68,7 @@
 
         <!-- Registration Form -->
         <form @submit.prevent="submitRegister" v-else>
-              <div>
+            <div>
                 <InputLabel for="name" value="Name" />
 
                 <TextInput
@@ -85,8 +80,6 @@
                     autofocus
                     autocomplete="name"
                 />
-
-                <InputError class="mt-2" :message="registerForm.errors.name" />
             </div>
 
             <div class="mt-4">
@@ -100,8 +93,6 @@
                     required
                     autocomplete="username"
                 />
-
-                <InputError class="mt-2" :message="registerForm.errors.email" />
             </div>
 
             <div class="mt-4">
@@ -115,8 +106,6 @@
                     required
                     autocomplete="new-password"
                 />
-
-                <InputError class="mt-2" :message="registerForm.errors.password" />
             </div>
 
             <div class="mt-4">
@@ -132,11 +121,6 @@
                     v-model="registerForm.password_confirmation"
                     required
                     autocomplete="new-password"
-                />
-
-                <InputError
-                    class="mt-2"
-                    :message="registerForm.errors.password_confirmation"
                 />
             </div>
 
@@ -155,6 +139,7 @@
                 >
                     Register
                 </PrimaryButton>
+            </div>
         </form>
     </GuestLayout>
 </template>
@@ -199,9 +184,9 @@ const submitLogin = () => {
 };
 
 const submitRegister = () => {
-        registerForm.post(route("register"), {
+    registerForm.post(route("register"), {
         onFinish: () => registerForm.reset("password", "password_confirmation"),
     });
 };
-
 </script>
+<style scoped></style>
