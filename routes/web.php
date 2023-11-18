@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GymProgramController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,15 +20,14 @@ use App\Http\Controllers\GymProgramController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
 });
 
 Route::get('/LogReg', function () {
-    return Inertia::render('LogReg');
+    return Inertia::render('LogReg', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
 });
 
 Route::get('/dashboard', function () {
@@ -41,5 +41,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
+
+Route::post('/test', function () { dd('Test route reached'); });
 
 require __DIR__.'/auth.php';

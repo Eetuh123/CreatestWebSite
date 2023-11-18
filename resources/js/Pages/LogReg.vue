@@ -151,26 +151,19 @@ import InputError from "@/Components/InputError.vue";
 import InputLabel from "@/Components/InputLabel.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
-import { Head, Link, useForm } from "@inertiajs/vue3";
+import { Inertia } from "@inertiajs/inertia";
 import Checkbox from "@/Components/Checkbox.vue";
 
 const showLoginForm = ref(true);
+const canResetPassword = ref(true);
 
-defineProps({
-    canResetPassword: {
-        type: Boolean,
-    },
-    status: {
-        type: String,
-    },
-});
-
-const loginForm = reactive({
+const loginForm = Inertia.form({
     email: "",
     password: "",
     remember: false,
 });
-const registerForm = reactive({
+
+const registerForm = Inertia.form({
     name: "",
     email: "",
     password: "",
@@ -178,14 +171,12 @@ const registerForm = reactive({
 });
 
 const submitLogin = () => {
-    loginForm.post(route("login"), {
-        onFinish: () => loginForm.reset("password"),
-    });
+    loginForm.post("/login", {});
 };
 
 const submitRegister = () => {
-    registerForm.post(route("register"), {
-        onFinish: () => registerForm.reset("password", "password_confirmation"),
+    registerForm.post("/register", {
+        onSuccess: () => registerForm.reset("password"),
     });
 };
 </script>
