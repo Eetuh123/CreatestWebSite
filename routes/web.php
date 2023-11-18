@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
+Route::post('/gymprogram/store', [GymProgramController::class, 'store'])->name('gymprogram.store');
 
 Route::post('/test', function () { dd('Test route reached'); });
 
