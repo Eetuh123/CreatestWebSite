@@ -1,4 +1,7 @@
 <template>
+    <div>
+        <CreateProgram />
+    </div>
     <div class="parent-container">
         <FrontBody />
     </div>
@@ -7,14 +10,18 @@
 <script>
 import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
+import CreateProgram from "./CreateProgram.vue";
 
 export default {
     components: {
         FrontBody,
         BackBody,
+        CreateProgram,
     },
     data() {
         return {
+            input1: "",
+            input2: "",
             muscleGroups: {
                 chest: { color: "#ccc", activated: false },
                 leg: { color: "#ccc", activated: false },
@@ -24,6 +31,21 @@ export default {
         };
     },
     methods: {
+        submitForm() {
+            const payload = {
+                input1: this.input1,
+                input2: this.input2,
+            };
+            axios
+                .post("/gymprogram", payload)
+                .then((response) => {
+                    alert("Form submitted successfully!");
+                })
+                .catch((error) => {
+                    alert("An error occurred while submitting the form.");
+                });
+        },
+
         hoverMuscle(muscle) {
             // Fetch more info or perform other actions
         },
