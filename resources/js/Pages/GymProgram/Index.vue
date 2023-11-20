@@ -2,62 +2,23 @@
     <div>
         <CreateProgram />
     </div>
+    <div v-if="user">Welcome, {{ user.name }}!</div>
     <div class="parent-container">
         <FrontBody />
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref, reactive, onMounted } from "vue";
+import axios from "axios";
 import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
 import CreateProgram from "./CreateProgram.vue";
+import { usePage } from "@inertiajs/inertia-vue3";
 
-export default {
-    components: {
-        FrontBody,
-        BackBody,
-        CreateProgram,
-    },
-    data() {
-        return {
-            input1: "",
-            input2: "",
-            muscleGroups: {
-                chest: { color: "#ccc", activated: false },
-                leg: { color: "#ccc", activated: false },
-                // more muscle groups
-            },
-            // other data
-        };
-    },
-    methods: {
-        submitForm() {
-            const payload = {
-                input1: this.input1,
-                input2: this.input2,
-            };
-            axios
-                .post("/gymprogram", payload)
-                .then((response) => {
-                    alert("Form submitted successfully!");
-                })
-                .catch((error) => {
-                    alert("An error occurred while submitting the form.");
-                });
-        },
-
-        hoverMuscle(muscle) {
-            // Fetch more info or perform other actions
-        },
-        updateMuscleColor() {
-            // Make API calls to get the current state of each muscle group in the program
-            // Update the color based on the fetched data
-        },
-    },
-    mounted() {
-        this.updateMuscleColor();
-    },
-};
+const { auth } = usePage().props;
+import { computed } from "vue";
+const user = auth?.user;
 </script>
 <style>
 .parent-container {
