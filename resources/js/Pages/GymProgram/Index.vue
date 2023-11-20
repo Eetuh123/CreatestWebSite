@@ -1,8 +1,7 @@
 <template>
-    <div><input v-model="name" /></div>
-    <input v-model="length" />
-    <button @click="submitForm">Submit</button>
-
+    <div>
+        <CreateProgram />
+    </div>
     <div class="parent-container">
         <FrontBody />
     </div>
@@ -11,11 +10,13 @@
 <script>
 import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
+import CreateProgram from "./CreateProgram.vue";
 
 export default {
     components: {
         FrontBody,
         BackBody,
+        CreateProgram,
     },
     data() {
         return {
