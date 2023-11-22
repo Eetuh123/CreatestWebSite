@@ -2,23 +2,26 @@
     <div>
         <CreateProgram />
     </div>
-    <div v-if="user">Welcome, {{ user.name }}!</div>
+    <p v-if="user">User ID: {{ user.name }}</p>
+    <div v-if="userData">Welcome, {{ userData.name }}!</div>
     <div class="parent-container">
         <FrontBody />
     </div>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, computed } from "vue";
 import axios from "axios";
 import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
 import CreateProgram from "./CreateProgram.vue";
 import { usePage } from "@inertiajs/inertia-vue3";
 
-const { auth } = usePage().props;
-import { computed } from "vue";
-const user = auth?.user;
+const { props } = usePage();
+console.log("Full Props Value:", props.value);
+
+// Directly access the user data
+const user = computed(() => props.value.user);
 </script>
 <style>
 .parent-container {
