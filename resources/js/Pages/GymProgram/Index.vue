@@ -2,8 +2,7 @@
     <div>
         <CreateProgram />
     </div>
-    <p v-if="user">User ID: {{ user.name }}</p>
-    <div v-if="userData">Welcome, {{ userData.name }}!</div>
+    <p v-if="user">User Name: {{ user.name }}</p>
     <div class="parent-container">
         <FrontBody />
     </div>
@@ -20,8 +19,7 @@ import { usePage } from "@inertiajs/inertia-vue3";
 const { props } = usePage();
 console.log("Full Props Value:", props.value);
 
-// Directly access the user data
-const user = computed(() => props.value.user);
+const user = computed(() => props.value.user); // Directly access the user data
 </script>
 <style>
 .parent-container {
