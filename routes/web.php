@@ -40,8 +40,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
-Route::post('/gymprogram/store', [GymProgramController::class, 'store'])->name('gymprogram.store');
+Route::middleware('auth')->group(function () {
+    Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
+    Route::post('/gymprogram/store', [GymProgramController::class, 'store'])->name('gymprogram.store');
+});
+
 
 Route::post('/test', function () { dd('Test route reached'); });
 
