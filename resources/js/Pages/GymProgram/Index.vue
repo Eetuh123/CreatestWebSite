@@ -6,6 +6,7 @@
     <div class="parent-container">
         <FrontBody />
     </div>
+    <button @click="logout">Logout</button>
 </template>
 
 <script setup>
@@ -15,11 +16,17 @@ import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
 import CreateProgram from "./CreateProgram.vue";
 import { usePage } from "@inertiajs/inertia-vue3";
+import { Inertia } from "@inertiajs/inertia";
 
 const { props } = usePage();
 console.log("Full Props Value:", props.value);
 
 const user = computed(() => props.value.user); // Directly access the user data
+
+const logout = () => {
+    Inertia.post('/logout'
+    );
+};
 </script>
 <style>
 .parent-container {

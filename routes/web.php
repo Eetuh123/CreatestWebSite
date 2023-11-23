@@ -28,7 +28,7 @@ Route::get('/LogReg', function () {
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
     ]);
-});
+})->middleware('guest');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
