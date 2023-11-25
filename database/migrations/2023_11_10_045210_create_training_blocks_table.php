@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('gym_program_id');
             $table->integer('block_length');
-            $table->integer('increments');
             $table->timestamps();
         });
     }
