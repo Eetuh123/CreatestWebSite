@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('name');
-            $table->integer('length');
+            $table->integer('total_length');
             $table->timestamps();
         });
     }

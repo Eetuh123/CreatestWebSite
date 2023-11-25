@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('practice_blocks', function (Blueprint $table) {
+        Schema::create('training_blocks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->foreignId('gym_program_id');
-            $table->integer('length');
+            $table->integer('block_length');
             $table->integer('increments');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('practice_blocks');
+        Schema::dropIfExists('training_blocks');
     }
 };
