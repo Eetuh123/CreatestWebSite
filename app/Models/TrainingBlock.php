@@ -12,7 +12,15 @@ class TrainingBlock extends Model
 
     protected $fillable = ['gym_program_id', 'name', 'block_length'];
 
+    protected $casts = [
+        'routine_schedule' => 'array',
+    ];
+
     public function trainingBlocks() {
-        return $this->hasMany(TrainingBlock::class);
+        return $this->belongsTo(GymProgram::class);
+    }
+
+    public function weeklyRoutines() {
+        return $this->hasMany(WeeklyRoutine::class);
     }
 }

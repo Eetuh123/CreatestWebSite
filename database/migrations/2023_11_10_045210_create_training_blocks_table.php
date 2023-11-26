@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('training_blocks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('gym_program_id');
+            $table->foreignId('training_block_id')->constrained()->onDelete('cascade');
+            $table->json('routine_schedule')->nullable();
             $table->integer('block_length');
             $table->timestamps();
         });

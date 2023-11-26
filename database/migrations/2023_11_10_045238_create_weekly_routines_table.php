@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('practice_block_id');
             $table->string('name');
-            $table->integer('length');
+            $table->integer('occurrence_weeks');
             $table->boolean('monday')->default(false);
             $table->boolean('tuesday')->default(false);
             $table->boolean('wednesday')->default(false);
@@ -23,8 +23,6 @@ return new class extends Migration
             $table->boolean('friday')->default(false);
             $table->boolean('saturday')->default(false);
             $table->boolean('sunday')->default(false);
-            $table->integer('week_number')->nullable();
-            $table->integer('increments')->nullable();
             $table->timestamps();
         });
     }
