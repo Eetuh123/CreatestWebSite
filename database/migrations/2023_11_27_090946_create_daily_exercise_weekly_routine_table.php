@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('weekly_routines', function (Blueprint $table) {
+        Schema::create('daily_exercise_weekly_routine', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('practice_block_id');
-            $table->string('name');
-            $table->integer('occurrence_weeks');
+            $table->foreignId('daily_exercise_id')->constrained()->onDelete('cascade');
+            $table->foreignId('weekly_routine_id')->constrained()->onDelete('cascade');
+            $table->json('days');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('weekly_routines');
+        Schema::dropIfExists('daily_exercise_weekly_routine');
     }
 };

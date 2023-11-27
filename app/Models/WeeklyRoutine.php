@@ -14,23 +14,6 @@ class WeeklyRoutine extends Model
         'training_block_id', 
         'name',
         'occurrence_weeks',
-        'monday',
-        'tuesday',
-        'wednesday',
-        'thursday',
-        'friday',
-        'saturday',
-        'sunday',
-    ];
-
-    protected $casts = [
-        'monday' => 'boolean',
-        'tuesday' => 'boolean',
-        'wednesday' => 'boolean',
-        'thursday' => 'boolean',
-        'friday' => 'boolean',
-        'saturday' => 'boolean',
-        'sunday' => 'boolean',
     ];
 
     public function trainingBlocks() {
