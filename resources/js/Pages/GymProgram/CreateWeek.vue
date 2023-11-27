@@ -12,13 +12,6 @@ import { Inertia } from "@inertiajs/inertia";
  const week = Inertia.form({
         name: "",
         occurrence_weeks: "",
-        monday:,
-        tuesday:,
-        wednesday:,
-        thursday:,
-        friday:,
-        saturday:,
-        sunday:,
         });
 </script>
 <style>
