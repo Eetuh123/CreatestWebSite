@@ -17,8 +17,10 @@ class GymProgramController extends Controller
      */
     public function index(Request $request): Response
     {
+        $id = Auth::id();
+        $gymPrograms = GymProgram::where('id', $id)->get();
         return Inertia::render('GymProgram/Index', [
-
+            'gymPrograms' => $gymPrograms,
         ]);
     }
 
@@ -61,4 +63,13 @@ class GymProgramController extends Controller
             'gymProgram' => $gymProgram,
         ]);
     }
+
+    public function show($id)
+    {
+        $gymProgram = GymProgram::findOrFail($id);
+        return Inertia::render('GymProgram/ProgramPage', [
+            'gymProgram' => $gymProgram,
+        ]);
+    }
+
 }

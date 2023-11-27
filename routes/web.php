@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
     Route::post('/gymprogram/store', [GymProgramController::class, 'store'])->name('gymprogram.store');
+    Route::get('/gymprogram/{id}', [GymProgramController::class, 'show'])->name('program.show');
 });
 
 
