@@ -66,7 +66,7 @@ class GymProgramController extends Controller
 
     public function show($id)
     {
-        $gymProgram = GymProgram::findOrFail($id);
+        $gymProgram = GymProgram::with('trainingBlocks')->findOrFail($id);
         return Inertia::render('GymProgram/ProgramPage', [
             'gymProgram' => $gymProgram,
         ]);

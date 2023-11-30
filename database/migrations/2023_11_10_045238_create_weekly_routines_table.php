@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('weekly_routines', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('practice_block_id');
+            $table->foreignId('training_block_id');
             $table->string('name');
             $table->integer('occurrence_weeks');
             $table->timestamps();

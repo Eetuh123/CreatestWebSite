@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
  
-class GymProgramController extends Controller
+class WeeklyRoutineController extends Controller
 {
     /**
      * Show the profile for a given user.
@@ -33,7 +33,7 @@ class GymProgramController extends Controller
         ]);
         
       $weeklyRoutine = WeeklyRoutine::create([
-            'training_block_id' => Auth::id(),
+            'training_block_id' => $validated['training_block_id'],
             'name' => $validated['week_name'],
             'occurrence_weeks' => $validated['occurrence_weeks'],
         ]);

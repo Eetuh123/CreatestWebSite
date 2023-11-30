@@ -10,7 +10,7 @@
       <div class="text-sm">Days name + automatic/hardcoded day</div>
       <!-- Exercise list goes here -->
     </div>
-    <div class="w-1/3 bg-gray-100 p-5 space-y-4 m-4"></div>
+    <div class="w-1/3 bg-gray-100 p-5 space-y-4 m-4"><CreateWeek :trainingBlocks="gymProgram.training_blocks" /></div>
     <div class="w-1/3 bg-gray-100 p-5 space-y-4 m-4">
       <div class="grid grid-cols-7 gap-2">
         <div class="day" v-for="day in daysOfMonth" :key="day">
@@ -26,11 +26,12 @@
 import { toRefs, ref, reactive, onMounted, computed } from "vue";
 import axios from "axios";
 import CreateProgram from "./CreateProgram.vue";
+import CreateWeek from "./CreateWeek.vue";
 import { usePage } from "@inertiajs/inertia-vue3";
 import { Inertia } from "@inertiajs/inertia";
 
 const { props } = usePage();
-const { user, gymPrograms } = toRefs(props.value);
+const { user, gymProgram } = toRefs(props.value);
 const currentMonth = ref(new Date().getMonth());
 const currentYear = ref(new Date().getFullYear());
 
