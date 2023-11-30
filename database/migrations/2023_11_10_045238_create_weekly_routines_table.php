@@ -13,18 +13,9 @@ return new class extends Migration
     {
         Schema::create('weekly_routines', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('practice_block_id');
+            $table->foreignId('training_block_id');
             $table->string('name');
-            $table->integer('length');
-            $table->boolean('monday')->default(false);
-            $table->boolean('tuesday')->default(false);
-            $table->boolean('wednesday')->default(false);
-            $table->boolean('thursday')->default(false);
-            $table->boolean('friday')->default(false);
-            $table->boolean('saturday')->default(false);
-            $table->boolean('sunday')->default(false);
-            $table->integer('week_number')->nullable();
-            $table->integer('increments')->nullable();
+            $table->integer('occurrence_weeks');
             $table->timestamps();
         });
     }

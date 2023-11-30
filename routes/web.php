@@ -3,9 +3,10 @@
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GymProgramController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\WeeklyRoutineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/gymprogram', [GymProgramController::class, 'index'])->name('gymprogram.index');
     Route::post('/gymprogram/store', [GymProgramController::class, 'store'])->name('gymprogram.store');
+    Route::get('/gymprogram/{id}', [GymProgramController::class, 'show'])->name('program.show');
+    
+    Route::post('/weeklyroutine/store', [WeeklyRoutineController::class, 'store'])->name('weeklyroutine.store');
 });
 
 

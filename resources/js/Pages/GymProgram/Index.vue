@@ -2,15 +2,20 @@
     <div>
         <CreateProgram />
     </div>
+    <div class="bg-rose-500 h-16 w-32 m-4">
     <p v-if="user">User Name: {{ user.name }}</p>
-    <div class="parent-container">
-        <FrontBody />
-    </div>
     <button @click="logout">Logout</button>
+    </div>
+    <div v-for="(program) in gymPrograms" :key="program.id" @click="openProgramPage(program.id)"> 
+        <div class="bg-sky-500 h-32 w-32 m-4">
+        {{ program.name }} 
+        </div>    
+    </div>
+    
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, computed } from "vue";
+import { toRefs, ref, reactive, onMounted, computed } from "vue";
 import axios from "axios";
 import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
@@ -19,9 +24,18 @@ import { usePage } from "@inertiajs/inertia-vue3";
 import { Inertia } from "@inertiajs/inertia";
 
 const { props } = usePage();
-console.log("Full Props Value:", props.value);
+const { user, gymPrograms } = toRefs(props.value);
+const creationButtonPosition = ref(0);
 
-const user = computed(() => props.value.user); // Directly access the user data
+const handleProgramClick = (index) => {
+  creationButtonPosition.value = (index + 1) % gymPrograms.value.length;
+};
+
+const openProgramPage = (programId => {
+     Inertia.visit(route('program.show', { id: programId }));
+});
+
+console.log("Full Props Value:", props.value);
 
 const logout = () => {
     Inertia.post('/logout'
