@@ -2,8 +2,6 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GymProgramController;
 use App\Http\Controllers\WeeklyRoutineController;
@@ -24,16 +22,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/LogReg', function () {
-    return Inertia::render('LogReg', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
+Route::get('/useraccses', function () {
+    return Inertia::render('Auth/UserAccess', [
     ]);
-})->middleware('guest');
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware('guest')->name('useraccses');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -48,7 +40,6 @@ Route::middleware('auth')->group(function () {
     
     Route::post('/weeklyroutine/store', [WeeklyRoutineController::class, 'store'])->name('weeklyroutine.store');
 });
-
 
 Route::post('/test', function () { dd('Test route reached'); });
 

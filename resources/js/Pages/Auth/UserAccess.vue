@@ -48,13 +48,13 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <Link
+                <InertiaLink
                     v-if="canResetPassword"
                     :href="route('password.request')"
                     class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                     Forgot your password?
-                </Link>
+                </InertiaLink>
 
                 <PrimaryButton
                     class="ml-4"
@@ -125,12 +125,12 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <Link
+                <InertiaLink
                     :href="route('login')"
                     class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                     Already registered?
-                </Link>
+                </InertiaLink>
 
                 <PrimaryButton
                     class="ml-4"
@@ -146,12 +146,13 @@
 
 <script setup>
 import { reactive, ref } from "vue";
+import { InertiaLink } from '@inertiajs/inertia-vue3';
+import { Inertia } from "@inertiajs/inertia";
 import GuestLayout from "@/Layouts/GuestLayout.vue";
 import InputError from "@/Components/InputError.vue";
 import InputLabel from "@/Components/InputLabel.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
-import { Inertia } from "@inertiajs/inertia";
 import Checkbox from "@/Components/Checkbox.vue";
 
 const showLoginForm = ref(true);
