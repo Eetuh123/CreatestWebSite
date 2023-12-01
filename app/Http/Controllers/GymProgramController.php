@@ -1,7 +1,7 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
+
 use Inertia\Inertia;
 use Inertia\Response;
 use App\Models\GymProgram;
@@ -9,7 +9,7 @@ use App\Models\TrainingBlock;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
- 
+
 class GymProgramController extends Controller
 {
     /**
@@ -28,9 +28,9 @@ class GymProgramController extends Controller
     {
 
         $validated = $request->validate([
-            'program_name' => 'required|string|max:255', 
+            'program_name' => 'required|string|max:255',
             'total_length' => 'required|integer|max:52',
-            'block_name' => 'required|string|max:255', 
+            'block_name' => 'required|string|max:255',
             'block_length' => [
                 'required',
                 'integer',
@@ -42,8 +42,8 @@ class GymProgramController extends Controller
                 },
             ],
         ]);
-        
-      $gymProgram = GymProgram::create([
+
+        $gymProgram = GymProgram::create([
             'user_id' => Auth::id(),
             'name' => $validated['program_name'],
             'total_length' => $validated['total_length'],
@@ -51,7 +51,7 @@ class GymProgramController extends Controller
 
         $numberOfBlocks = ceil($validated['total_length'] / $validated['block_length']);
 
-        for ($i = 0; $i < $numberOfBlocks; $i++) {    
+        for ($i = 0; $i < $numberOfBlocks; $i++) {
             TrainingBlock::create([
                 'gym_program_id' => $gymProgram->id,
                 'name' => $validated['program_name'] . ' Block ' . ($i + 1),
@@ -71,5 +71,4 @@ class GymProgramController extends Controller
             'gymProgram' => $gymProgram,
         ]);
     }
-
 }
