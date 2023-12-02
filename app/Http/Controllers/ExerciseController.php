@@ -1,18 +1,14 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use Inertia\Response;
-use App\Models\WeeklyRoutine;
+use App\Models\Exercise;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
-class DailySessionController extends Controller
+class ExerciseController extends Controller
 {
-    /**
-     * Show the profile for a given user.
-     */
     public function index(Request $request): Response
     {
         return Inertia::render('GymProgram/Index', []);
@@ -37,4 +33,5 @@ class DailySessionController extends Controller
             'gymProgram' => $weeklyRoutine,
         ]);
     }
+    
 }
