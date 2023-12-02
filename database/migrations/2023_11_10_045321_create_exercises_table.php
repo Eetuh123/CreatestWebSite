@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_custom_exercises', function (Blueprint $table) {
+        Schema::create('exercises', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('exercise_id');
             $table->foreignId('user_id');
             $table->json('body_parts')->nullable();
             $table->integer('reps')->nullable();
