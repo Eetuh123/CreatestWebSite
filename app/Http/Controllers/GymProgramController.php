@@ -18,7 +18,7 @@ class GymProgramController extends Controller
     public function index(Request $request): Response
     {
         $id = Auth::id();
-        $gymPrograms = GymProgram::where('id', $id)->get();
+        $gymPrograms = GymProgram::where('user_id', $id)->get();
         return Inertia::render('GymProgram/Index', [
             'gymPrograms' => $gymPrograms,
         ]);

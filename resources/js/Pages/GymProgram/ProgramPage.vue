@@ -11,8 +11,8 @@
                     Logout
                 </button>
             </div>
-            <div class="text-lg">Gym Program name</div>
-            <div class="text-sm">Days name + automatic/hardcoded day</div>
+            <div class="text-lg">{{ gymProgram.name }}</div>
+            <div class="text-sm">Length of the program {{ gymProgram.total_length }}</div>
             <!-- Exercise list goes here -->
         </div>
         <div class="w-1/3 bg-gray-100 p-5 space-y-4 m-4">
@@ -38,6 +38,7 @@ import CreateWeek from "./CreateWeek.vue";
 
 const { props } = usePage();
 const { user, gymProgram } = toRefs(props.value);
+const currentDay = ref(new Date().getDay());
 const currentMonth = ref(new Date().getMonth());
 const currentYear = ref(new Date().getFullYear());
 
