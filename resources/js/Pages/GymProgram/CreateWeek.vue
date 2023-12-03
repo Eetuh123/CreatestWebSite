@@ -1,7 +1,6 @@
 <template>
     <div>
         <form @submit.prevent="submitWeek">
-            <div>
                 <InputLabel for="weekName">Name</InputLabel>
                 <TextInput
                     id="weekName"
@@ -42,9 +41,7 @@
                         {{ block.name }}
                     </option>
                 </select>
-
                 <PrimaryButton type="submit">Submit All</PrimaryButton>
-            </div>
         </form>
     </div>
 </template>

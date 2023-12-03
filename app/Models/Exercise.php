@@ -16,6 +16,7 @@ class Exercise extends Model
         'weight',
         'rest',
         'notes',
+        'user_id',
     ];
 
     public function dailySession() {

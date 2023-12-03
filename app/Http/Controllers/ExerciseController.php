@@ -6,31 +6,39 @@ use Inertia\Response;
 use App\Models\Exercise;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 
 class ExerciseController extends Controller
 {
     public function index(Request $request): Response
     {
-        return Inertia::render('GymProgram/Index', []);
+        return Inertia::render('GymProgram/CreateExerciseModal', []);
     }
 
     public function store(Request $request): RedirectResponse
     {
 
         $validated = $request->validate([
-            'training_block_id' => 'required|integer',
-            'week_name' => 'required|string|max:255',
-            'occurrence_weeks' => 'required|integer|max:52',
+            'name'  => 'required|string|max:255',
+            'sets'  => 'integer|between:0,100',
+            'reps'  => 'integer|between:0,100',
+            'weight' => 'integer|between:0,1000',
+            'rest'  => 'integer',
+            'notes' => 'string|max:255',
         ]);
 
-        $weeklyRoutine = WeeklyRoutine::create([
-            'training_block_id' => $validated['training_block_id'],
-            'name' => $validated['week_name'],
-            'occurrence_weeks' => $validated['occurrence_weeks'],
+        $exercise = Exercise::create([
+            'name'  => $validated['name'],
+            'user_id' => Auth::id(),
+            'sets'  => $validated['sets'],
+            'reps'  => $validated['reps'],
+            'weight' => $validated['weight'],
+            'rest'  => $validated['rest'],
+            'notes' => $validated['notes'],
         ]);
 
         return redirect()->route('gymprogram.index')->with([
-            'gymProgram' => $weeklyRoutine,
+            'gymProgram' => $exercise,
         ]);
     }
     
