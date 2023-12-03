@@ -19,4 +19,8 @@ class WeeklyRoutine extends Model
     public function trainingBlocks() {
         return $this->belongsTo(TrainingBlock::class);
     }
+
+    public function dailySessions() {
+        return $this->hasMany(DailySession::class);
+    }
 }

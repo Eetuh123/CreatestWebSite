@@ -12,9 +12,6 @@ use Illuminate\Http\RedirectResponse;
 
 class GymProgramController extends Controller
 {
-    /**
-     * Show the profile for a given user.
-     */
     public function index(Request $request): Response
     {
         $id = Auth::id();

@@ -8,7 +8,7 @@ use App\Models\WeeklyRoutine;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
-class WeeklyRoutineController extends Controller
+class DailySessionController extends Controller
 {
     public function index(Request $request): Response
     {

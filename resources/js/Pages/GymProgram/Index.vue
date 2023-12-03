@@ -15,6 +15,12 @@
             {{ program.name }}
         </div>
     </div>
+    <button @click="toggleExerciseModal">Open Exercise Modal</button>
+        <CreateExerciseModal 
+        v-if="isExerciseModalVisible" 
+        @close="isExerciseModalVisible = false"
+    />
+
 </template>
 
 <script setup>
@@ -25,10 +31,16 @@ import axios from "axios";
 import BackBody from "../../Components/BodyParts/BackBody.vue";
 import FrontBody from "../../Components/BodyParts/FrontBody.vue";
 import CreateProgram from "./CreateProgram.vue";
+import CreateExerciseModal from "./CreateExerciseModal.vue";
 
+const isExerciseModalVisible = ref(false);
 const { props } = usePage();
 const { user, gymPrograms } = toRefs(props.value);
 const creationButtonPosition = ref(0);
+
+const toggleExerciseModal = () => {
+    isExerciseModalVisible.value = !isExerciseModalVisible.value;
+};
 
 const handleProgramClick = (index) => {
     creationButtonPosition.value = (index + 1) % gymPrograms.value.length;

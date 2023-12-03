@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_custom_exercises', function (Blueprint $table) {
+        Schema::create('exercises', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('exercise_id');
             $table->foreignId('user_id');
+            $table->string('name');
             $table->json('body_parts')->nullable();
             $table->integer('reps')->nullable();
             $table->integer('sets')->nullable();
             $table->integer('rest')->nullable();
             $table->integer('intensity')->nullable();
             $table->integer('weight')->nullable();
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

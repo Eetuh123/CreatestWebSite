@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('daily_exercise_weekly_routine', function (Blueprint $table) {
+        Schema::create('daily_session_weekly_routine', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('daily_exercise_id')->constrained()->onDelete('cascade');
+            $table->foreignId('daily_session_id')->constrained()->onDelete('cascade');
             $table->foreignId('weekly_routine_id')->constrained()->onDelete('cascade');
             $table->json('days');
             $table->timestamps();
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('daily_exercise_weekly_routine');
+        Schema::dropIfExists('daily_session_weekly_routine');
     }
 };
