@@ -21,6 +21,6 @@ class WeeklyRoutine extends Model
     }
 
     public function dailySessions() {
-        return $this->hasMany(DailySession::class);
+        return $this->belongsToMany(DailySession::class, 'daily_session_weekly_routine');
     }
 }
