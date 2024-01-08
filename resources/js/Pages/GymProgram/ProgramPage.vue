@@ -13,6 +13,7 @@
             </div>
             <div class="text-lg">{{ gymProgram.name }}</div>
             <div class="text-sm">Length of the program {{ gymProgram.total_length }}</div>
+            <CreateDailySessionModal :currentWeek="currentWeek" />
             <!-- Exercise list goes here -->
         </div>
         <div class="w-1/3 bg-gray-100 p-5 space-y-4 m-4">
@@ -40,9 +41,10 @@ import { usePage } from "@inertiajs/inertia-vue3";
 import axios from "axios";
 import CreateProgram from "./CreateProgram.vue";
 import CreateWeek from "./CreateWeek.vue";
+import CreateDailySessionModal from "./CreateDailySessionModal.vue";
 
 const { props } = usePage();
-const { user, gymProgram } = toRefs(props.value);
+const { user, gymProgram, currentWeek } = toRefs(props.value);
 const currentDay = ref(new Date().getDate());
 const currentMonth = ref(new Date().getMonth());
 const currentYear = ref(new Date().getFullYear());
