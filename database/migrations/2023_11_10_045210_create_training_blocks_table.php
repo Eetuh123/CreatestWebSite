@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('gym_program_id')->constrained()->onDelete('cascade');
             $table->json('routine_schedule')->nullable();
-            $table->integer('block_length');
+            $table->integer('number_of_weeks');
+            $table->date('starting_day');
+            $table->date('ending_day');
             $table->timestamps();
         });
     }

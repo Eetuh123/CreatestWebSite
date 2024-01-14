@@ -10,17 +10,13 @@ class WeeklyRoutine extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'training_block_id', 
-        'name',
-        'occurrence_weeks',
-    ];
+    protected $fillable = ['name', 'occurrence_weeks', 'training_block_id'];
 
     public function trainingBlocks() {
         return $this->belongsTo(TrainingBlock::class);
     }
 
     public function dailySessions() {
-        return $this->hasMany(DailySession::class);
+        return $this->belongsToMany(DailySession::class, 'daily_session_weekly_routine');
     }
 }

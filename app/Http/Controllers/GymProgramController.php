@@ -44,6 +44,8 @@ class GymProgramController extends Controller
             'user_id' => Auth::id(),
             'name' => $validated['program_name'],
             'total_length' => $validated['total_length'],
+            'starting_day' => now()->toDateString(),
+            'ending_day' => now()->addWeeks($validated['total_length'])->toDateString(),
         ]);
 
         $numberOfBlocks = ceil($validated['total_length'] / $validated['block_length']);
@@ -52,7 +54,9 @@ class GymProgramController extends Controller
             TrainingBlock::create([
                 'gym_program_id' => $gymProgram->id,
                 'name' => $validated['program_name'] . ' Block ' . ($i + 1),
-                'block_length' => $validated['block_length'],
+                'number_of_weeks' => $validated['block_length'],
+                'starting_day' =>  now()->addWeeks($i * $validated['block_length'])->toDateString(),
+                'ending_day' =>  now()->addWeeks(($i + 1) * $validated['block_length'])->toDateString(),
             ]);
         }
 
@@ -63,9 +67,17 @@ class GymProgramController extends Controller
 
     public function show($id)
     {
-        $gymProgram = GymProgram::with('trainingBlocks')->findOrFail($id);
+    $gymProgram = GymProgram::with(['trainingBlocks.weeklyRoutines.dailySessions.exercises'])->findOrFail($id);
+
+    $currentWeek = null;
+        if ($gymProgram->trainingBlocks->isNotEmpty()) {
+            $firstTrainingBlock = $gymProgram->trainingBlocks->first();
+            $currentWeek = $firstTrainingBlock->getCurrentWeek($firstTrainingBlock->id);
+        }
+
         return Inertia::render('GymProgram/ProgramPage', [
             'gymProgram' => $gymProgram,
+            'currentWeek' => $currentWeek,
         ]);
     }
 }

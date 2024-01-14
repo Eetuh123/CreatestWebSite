@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('name');
             $table->integer('total_length');
+            $table->date('starting_day');
+            $table->date('ending_day');
             $table->timestamps();
         });
     }

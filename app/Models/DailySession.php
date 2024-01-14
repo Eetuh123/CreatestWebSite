@@ -9,10 +9,10 @@ class DailySession extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'notes', 'standardized_rest', 'week_id'];
+    protected $fillable = ['name', 'notes', 'standardized_rest'];
 
-    public function weeklyRoutine() {
-        return $this->belongsToMany(weeklyRoutine::class, 'daily_session_weekly_routine', 'daily_session_id', 'weekly_routine_id');
+    public function weeklyRoutines() {
+        return $this->belongsToMany(WeeklyRoutine::class, 'daily_session_weekly_routine');
     }
 
     public function exercises() {
